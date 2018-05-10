@@ -1,0 +1,5 @@
+The data folders correspond to the temperature dependence in Shreve JPC 99 19 1999 
+
+Folders with "g" at the end correspond to the brownian oscillator model for broadening. This model is invalid at low temperature so only 290 and 1000K are compared to the phenomenological gamma broadening. There is a slight difference between the two broadening mechanisms at both temperatures, but they are pretty close.
+
+The absorption and raman data match the published magnitudes and shapes at each temperature exactly. I had to enter T=0.1K for this calculation since there are a bunch of exceptions to handle for T=0K and it doesn't seem all that important. 

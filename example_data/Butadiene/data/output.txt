@@ -1,0 +1,9 @@
+E00 = 50359.0 cm-1 
+gamma = 200.0 cm-1 
+theta = 100.0 cm-1 
+M = 1.0 Angstroms 
+n = 1.33
+T = 298.0 Kelvin 
+solvent reorganization energy = 18.0351797346 cm-1 
+internal reorganization energy = 1943.5158529 cm-1 
+reorganization energy = 1961.55103264 cm-1 

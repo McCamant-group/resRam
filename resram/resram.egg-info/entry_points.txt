@@ -1,0 +1,3 @@
+[console_scripts]
+resram = resram.resram:main
+

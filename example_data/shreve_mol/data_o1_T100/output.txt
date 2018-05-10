@@ -1,0 +1,16 @@
+E00 = 20000.0 cm-1 
+gamma = 70.0 cm-1 
+theta = 1.0 cm-1 
+M = 1.0 Angstroms 
+n = 1.0
+T = 100.0 Kelvin 
+solvent reorganization energy = 6.58374236211 cm-1 
+internal reorganization energy = 1235.0 cm-1 
+reorganization energy = 1241.58374236 cm-1 
+
+Boltzmann averaged states and their corresponding weights 
+[[ 0.64312469]
+ [ 0.23489636]
+ [ 0.08579409]
+ [ 0.03618486]]
+[[0, 0, 0, 0], [1, 0, 0, 0], [2, 0, 0, 0], [0, 1, 0, 0]]
