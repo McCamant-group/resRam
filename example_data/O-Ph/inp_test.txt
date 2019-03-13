@@ -1,4 +1,4 @@
-730 # gamma linewidth parameter (cm^-1) #770
+730 # gamma linewidth parameter (cm^-1) #730
 1 # theta static inhomogeneous linewidth parameter (cm^-1) #50
 17750 # E0 (cm^-1)
 0.1 # kappa solvent parameter

@@ -12,3 +12,5 @@
 2 # rshift axis step size (cm^-1)
 10 # raman spectrum resolution (cm^-1)
 298 # Temperature (K)
+1 #convergence
+0 #Boltz toggle

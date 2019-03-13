@@ -13,3 +13,4 @@
 20 # raman spectrum resolution (cm^-1)
 298 # Temperature (K)
 1 # convergence for sums # no effect since order > 1 broken
+1 # Boltz Toggle

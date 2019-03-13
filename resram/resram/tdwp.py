@@ -5,7 +5,8 @@ import params as p
 import boltz_states as bs
 import ovlp_fn as fn
 import matplotlib.pyplot as plt
-np.set_printoptions(threshold='nan')
+import sys
+np.set_printoptions(threshold=sys.maxsize)
 
 warnings.filterwarnings('ignore') # Supresses 'casting to real discards complex part' warning
 

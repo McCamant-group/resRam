@@ -6,6 +6,7 @@ def main():
 	import os
 	import tdwp 
 	import params as p
+	import sys
 	import matplotlib.pyplot as plt
 	        
 	abs_cross,fl_cross,raman_cross,boltz_states,boltz_coef  = tdwp.cross_sections(p.convEL,p.delta,p.theta,p.D,p.L,p.M,p.E0)
@@ -32,7 +33,7 @@ def main():
             
 	np.savetxt("data/profs.dat",np.array(np.real(raman_cross)))
 	           
-	np.set_printoptions(threshold='nan')	                
+	np.set_printoptions(threshold=sys.maxsize)	                
 	np.savetxt("data/profs.dat",np.real(np.transpose(raman_cross)))
 	np.savetxt("data/raman_spec.dat",raman_spec)
 	np.savetxt("data/EL.dat",p.convEL)	

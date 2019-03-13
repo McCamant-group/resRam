@@ -28,7 +28,7 @@ with open(paramsIn,'r') as i:
 	hbar =  5.3088 # plancks constant cm^-1*ps
 	T = float(inp[13]) # Temperature K
 	kbT = 0.695*T # kbT energy (cm^-1/K)*cm^-1=cm^-1
-	cutoff = kbT # cutoff for boltzmann dist in wavenumbers
+	cutoff = kbT*0.1 # cutoff for boltzmann dist in wavenumbers
 	if T > 10.0:
 		beta = 1/kbT # beta cm
 		eta = 1/(np.exp(wg/kbT)-1) # array of average thermal occupation numbers for each mode
@@ -78,16 +78,22 @@ with open(paramsIn,'r') as i:
 
 	# Determine order from Boltzmann distribution of possible initial states #
 	convergence = float(inp[14]) # desired boltzmann coefficient for cutoff
-	boltz_states,boltz_coef,dos_energy = bs.boltz_states()
-	if T == 0.0:
-		state = 0
-	else:
-		state = min(range(len(boltz_coef)),key=lambda j:abs(boltz_coef[j]-convergence))
+	boltz_toggle = int(inp[15])
 
-	if state == 0:
+	if boltz_toggle == 1:
+		boltz_states,boltz_coef,dos_energy = bs.boltz_states()
+		if T == 0.0:
+			state = 0
+		else:
+			state = min(range(len(boltz_coef)),key=lambda j:abs(boltz_coef[j]-convergence))
+
+		if state == 0:
+			order = 1
+		else:
+			order = max(max(boltz_states[:state])) + 1
+	if boltz_toggle == 0:
+		boltz_states,boltz_coef,dos_energy = [0,0,0]
 		order = 1
-	else:
-		order = max(max(boltz_states[:state])) + 1
 
 	a = np.arange(order)
 	b = a
